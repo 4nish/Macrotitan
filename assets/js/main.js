@@ -1,25 +1,23 @@
-/*=============== SHOW MENU ===============*/
+/*show menu*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
+/*show menu*/
 if(navToggle){
     navToggle.addEventListener('click', () =>{
         navMenu.classList.add('show-menu')
     })
 }
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
+/*menu hidden*/
 if(navClose){
     navClose.addEventListener('click', () =>{
         navMenu.classList.remove('show-menu')
     })
 }
 
-/*=============== REMOVE MENU MOBILE ===============*/
+/*to remove menu from mobile */
 const navLink = document.querySelectorAll('.nav__link')
 
 const linkAction = () =>{
@@ -29,7 +27,7 @@ const linkAction = () =>{
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
+/*change background header*/
 const scrollHeader = () =>{
     const header = document.getElementById('header')
     // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
@@ -38,7 +36,7 @@ const scrollHeader = () =>{
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*=============== TESTIMONIAL SWIPER ===============*/
+/*testimonial swiper*/
 let testimonialSwiper = new Swiper(".testimonial-swiper", {
     spaceBetween: 30,
     loop: 'true',
@@ -49,7 +47,7 @@ let testimonialSwiper = new Swiper(".testimonial-swiper", {
     },
 });
 
-/*=============== NEW SWIPER ===============*/
+/*new swiper*/
 let newSwiper = new Swiper(".new-swiper", {
     spaceBetween: 24,
     loop: 'true',
@@ -67,7 +65,7 @@ let newSwiper = new Swiper(".new-swiper", {
     },
 });
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+/*scroll sections active link*/
 const sections = document.querySelectorAll('section[id]')
     
 const scrollActive = () =>{
@@ -88,7 +86,7 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
-/*=============== SHOW SCROLL UP ===============*/ 
+/*show scroll up*/ 
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
     // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
@@ -97,28 +95,24 @@ const scrollUp = () =>{
 }
 window.addEventListener('scroll', scrollUp)
 
-/*=============== SHOW CART ===============*/
+/*show cart*/
 const cart = document.getElementById('cart'),
       cartShop = document.getElementById('cart-shop'),
       cartClose = document.getElementById('cart-close')
 
-/*===== CART SHOW =====*/
-/* Validate if constant exists */
 if(cartShop){
     cartShop.addEventListener('click', () =>{
         cart.classList.add('show-cart')
     })
 }
 
-/*===== CART HIDDEN =====*/
-/* Validate if constant exists */
 if(cartClose){
     cartClose.addEventListener('click', () =>{
         cart.classList.remove('show-cart')
     })
 }
 
-/*=============== DARK LIGHT THEME ===============*/ 
+/*dark theme*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'bx-sun'
